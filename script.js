@@ -12,20 +12,74 @@ const stopBtn = document.getElementById('stop-btn');
 const status = document.getElementById('status');
 
 let voices = [];
+let italianVoices = [];
 let utterance = null;
+
+const HIGH_QUALITY_VOICES = [
+    'Google Italiano',
+    'Google Italian',
+    'Alice',
+    'Luca',
+    'Alice (Enhanced)',
+    'Luca (Enhanced)',
+    'Microsoft Elsa',
+    'Microsoft Cosimo',
+    'Samantha',
+    'Vittoria',
+    'Chiara',
+    'Federica',
+    'Giorgio',
+    'Paolo',
+    'Silvia',
+    'Elsa',
+    'Cosimo'
+];
+
+function isHighQualityVoice(voice) {
+    const name = voice.name.toLowerCase();
+    const lang = voice.lang.toLowerCase();
+    
+    if (!lang.startsWith('it')) return false;
+    
+    return HIGH_QUALITY_VOICES.some(hq => 
+        name.includes(hq.toLowerCase())
+    ) || voice.localService === false;
+}
 
 function loadVoices() {
     voices = speechSynthesis.getVoices();
     voiceSelect.innerHTML = '';
     
-    voices.forEach((voice, index) => {
+    italianVoices = voices.filter(v => v.lang.startsWith('it'));
+    
+    const highQuality = italianVoices.filter(isHighQualityVoice);
+    const standard = italianVoices.filter(v => !isHighQualityVoice(v));
+    
+    const sortedVoices = [...highQuality, ...standard];
+    
+    if (sortedVoices.length === 0) {
         const option = document.createElement('option');
-        option.value = index;
-        option.textContent = `${voice.name} (${voice.lang})`;
-        if (voice.default) option.selected = true;
+        option.value = '';
+        option.textContent = 'Nessuna voce italiana disponibile';
+        option.disabled = true;
+        voiceSelect.appendChild(option);
+        speakBtn.disabled = true;
+        return;
+    }
+    
+    sortedVoices.forEach((voice, index) => {
+        const option = document.createElement('option');
+        option.value = voices.indexOf(voice);
+        const qualityBadge = highQuality.includes(voice) ? ' ⭐' : '';
+        option.textContent = `${voice.name} (${voice.lang})${qualityBadge}`;
+        if (voice.default || index === 0) option.selected = true;
         voiceSelect.appendChild(option);
     });
+    
+    speakBtn.disabled = false;
 }
+
+const highQuality = italianVoices.filter(isHighQualityVoice);
 
 speechSynthesis.onvoiceschanged = loadVoices;
 loadVoices();
@@ -62,11 +116,17 @@ function speak() {
         return;
     }
 
+    if (italianVoices.length === 0) {
+        alert('Nessuna voce italiana disponibile in questo browser');
+        return;
+    }
+
     utterance = new SpeechSynthesisUtterance(text);
     utterance.voice = voices[voiceSelect.value];
     utterance.rate = parseFloat(rateInput.value);
     utterance.pitch = parseFloat(pitchInput.value);
     utterance.volume = parseFloat(volumeInput.value);
+    utterance.lang = 'it-IT';
 
     utterance.onstart = () => {
         updateStatus('In lettura...', 'speaking');
