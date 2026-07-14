@@ -24,7 +24,31 @@
             </a>
             
             <div class="nav-menu" id="navMenu">
-                <a href="#servizi" class="nav-link">Servizi</a>
+                <div class="nav-item has-dropdown">
+                    <button class="nav-link dropdown-toggle" aria-haspopup="true" aria-expanded="false" aria-controls="servizi-dropdown">
+                        Servizi
+                        <svg class="dropdown-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                            <polyline points="6 9 12 15 18 9"/>
+                        </svg>
+                    </button>
+                    <div class="dropdown-menu" id="servizi-dropdown" role="menu">
+                        <a href="#servizi" class="dropdown-item" role="menuitem">Tutti i servizi</a>
+                        <hr class="dropdown-divider">
+                        <span class="dropdown-section" role="heading">Diagnostica</span>
+                        <a href="#servizi" class="dropdown-item" data-service="1" role="menuitem">Visita Oculistica Completa</a>
+                        <a href="#servizi" class="dropdown-item" data-service="4" role="menuitem">Topografia Corneale</a>
+                        <a href="#servizi" class="dropdown-item" data-service="5" role="menuitem">Campo Visivo Computerizzato</a>
+                        <a href="#servizi" class="dropdown-item" data-service="6" role="menuitem">OCT Tomografia Coerenza Ottica</a>
+                        <hr class="dropdown-divider">
+                        <span class="dropdown-section" role="heading">Correzione</span>
+                        <a href="#servizi" class="dropdown-item" data-service="2" role="menuitem">Controllo Vista</a>
+                        <a href="#servizi" class="dropdown-item" data-service="3" role="menuitem">Adattamento Lenti a Contatto</a>
+                        <a href="#servizi" class="dropdown-item" data-service="8" role="menuitem">Occhiali da Vista Personalizzati</a>
+                        <hr class="dropdown-divider">
+                        <span class="dropdown-section" role="heading">Chirurgia</span>
+                        <a href="#servizi" class="dropdown-item" data-service="7" role="menuitem">Chirurgia Refrattiva (Consulto)</a>
+                    </div>
+                </div>
                 <a href="#chi-siamo" class="nav-link">Chi Siamo</a>
                 <a href="#team" class="nav-link">Team</a>
                 <a href="#contatti" class="nav-link">Contatti</a>

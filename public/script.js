@@ -10,13 +10,15 @@
         selectedTime: null
     };
 
-    const elements = {
+const elements = {
         header: document.querySelector('.header'),
         navMenu: document.querySelector('.nav-menu'),
         navToggle: document.querySelector('.nav-toggle'),
-        navLinks: document.querySelectorAll('.nav-link'),
+        navLinks: document.querySelectorAll('.nav-link:not(.dropdown-toggle)'),
+        dropdownToggles: document.querySelectorAll('.dropdown-toggle'),
+        dropdownItems: document.querySelectorAll('.dropdown-item'),
         scrollTop: document.querySelector('.scroll-top'),
-        bookingForm: document.querySelector('#booking-form'),
+        bookingForm: document.querySelector('#bookingForm'),
         toast: document.querySelector('#toast'),
         servizioSelect: document.querySelector('#servizio'),
         dataInput: document.querySelector('#data'),
@@ -163,6 +165,20 @@
 
         elements.navLinks.forEach(link => {
             link.addEventListener('click', () => closeMenu());
+        });
+
+        elements.dropdownToggles.forEach(toggle => {
+            toggle.addEventListener('click', (e) => {
+                if (window.innerWidth <= 768) {
+                    e.preventDefault();
+                    const navItem = toggle.closest('.nav-item');
+                    navItem.classList.toggle('open');
+                }
+            });
+        });
+
+        elements.dropdownItems.forEach(item => {
+            item.addEventListener('click', () => closeMenu());
         });
 
         document.addEventListener('click', (e) => {
