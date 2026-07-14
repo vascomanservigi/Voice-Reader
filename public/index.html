@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Ottica Visione Chiara - Il tuo negozio oculistico di fiducia. Visite oculistiche, occhiali, lenti a contatto e chirurgia refrattiva.">
+    <meta name="theme-color" content="#000000">
+    <title>Ottica Visione Chiara | Il tuo sguardo merita il meglio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="header" id="header">
+        <nav class="nav container">
+            <a href="#" class="logo" aria-label="Ottica Visione Chiara - Home">
+                <svg class="logo-icon" viewBox="0 0 48 48" fill="none" aria-hidden="true">
+                    <ellipse cx="24" cy="24" rx="20" ry="12" stroke="currentColor" stroke-width="2"/>
+                    <circle cx="24" cy="24" r="6" fill="currentColor"/>
+                    <path d="M12 24c0-6.6 5.4-12 12-12s12 5.4 12 12" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                </svg>
+                <span class="logo-text">Visione<span class="logo-accent">Chiara</span></span>
+            </a>
+            
+            <div class="nav-menu" id="navMenu">
+                <a href="#servizi" class="nav-link">Servizi</a>
+                <a href="#chi-siamo" class="nav-link">Chi Siamo</a>
+                <a href="#team" class="nav-link">Team</a>
+                <a href="#contatti" class="nav-link">Contatti</a>
+                <a href="#prenotazione" class="nav-link btn-nav">Prenota</a>
+            </div>
+            
+            <button class="nav-toggle" id="navToggle" aria-label="Apri menu" aria-expanded="false">
+                <span class="hamburger"></span>
+            </button>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero" id="home" aria-labelledby="hero-title">
+            <div class="hero-bg"></div>
+            <div class="container hero-content">
+                <div class="hero-text">
+                    <span class="hero-badge">Dal 1995 al tuo servizio</span>
+                    <h1 id="hero-title" class="hero-title">La tua vista,<br><span class="hero-accent">la nostra missione</span></h1>
+                    <p class="hero-description">Esami oculistici completi, occhiali su misura, lenti a contatto e chirurgia refrattiva. Tecnologia all'avanguardia e cura personalizzata.</p>
+                    <div class="hero-actions">
+                        <a href="#prenotazione" class="btn btn-primary">Prenota una visita</a>
+                        <a href="#servizi" class="btn btn-secondary">Scopri i servizi</a>
+                    </div>
+                    <div class="hero-stats">
+                        <div class="stat">
+                            <span class="stat-number">28+</span>
+                            <span class="stat-label">Anni esperienza</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-number">15.000+</span>
+                            <span class="stat-label">Pazienti soddisfatti</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-number">98%</span>
+                            <span class="stat-label">Recensioni positive</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="hero-visual" aria-hidden="true">
+                    <div class="hero-card hero-card-1">
+                        <div class="card-icon">👁️</div>
+                        <div>
+                            <h3>Esame completo</h3>
+                            <p>Tecnologia OCT e Topografia</p>
+                        </div>
+                    </div>
+                    <div class="hero-card hero-card-2">
+                        <div class="card-icon">👓</div>
+                        <div>
+                            <h3>Occhiali su misura</h3>
+                            <p>Montature esclusive Italiane</p>
+                        </div>
+                    </div>
+                    <div class="hero-card hero-card-3">
+                        <div class="card-icon">🔬</div>
+                        <div>
+                            <h3>Chirurgia refrattiva</h3>
+                            <p>Laser di ultima generazione</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-scroll" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M12 5v14M19 12l-7 7-7-7"/>
+                </svg>
+            </div>
+        </section>
+
+        <section class="services" id="servizi" aria-labelledby="servizi-title">
+            <div class="container">
+                <header class="section-header">
+                    <span class="section-tag">I nostri servizi</span>
+                    <h2 id="servizi-title" class="section-title">Eccellenza in ogni <span class="text-accent">dettaglio</span></h2>
+                    <p class="section-description">Dalla prevenzione alla correzione, offriamo soluzioni complete per la salute dei tuoi occhi</p>
+                </header>
+                
+                <div class="services-grid" id="servicesGrid" role="list">
+                </div>
+            </div>
+        </section>
+
+        <section class="about" id="chi-siamo" aria-labelledby="about-title">
+            <div class="container about-grid">
+                <div class="about-visual">
+                    <div class="about-image-wrapper">
+                        <img src="https://images.unsplash.com/photo-1577563908411-5077b6dc7624?w=800&h=600&fit=crop" alt="Studio oculistico moderno con attrezzature all'avanguardia" class="about-image">
+                        <div class="about-experience">
+                            <span class="exp-number">28</span>
+                            <span class="exp-text">Anni di<br>eccellenza</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-content">
+                    <span class="section-tag">Chi siamo</span>
+                    <h2 id="about-title" class="section-title">Una storia di <span class="text-accent">passione</span> per la vista</h2>
+                    <div class="about-text">
+                        <p>Fondata nel 1995 dal Dott. Marco Rossi, <strong>Ottica Visione Chiara</strong> nasce dalla volontà di offrire un servizio oculistico d'eccellenza, unendo competenza medica e attenzione al paziente.</p>
+                        <p>Oggi, la nostra struttura dispone delle tecnologie diagnostiche più avanzate: OCT Spectralis, Topografo corneale Sirius, Campo visivo Humphrey e Laser Excimer di ultima generazione per la chirurgia refrattiva.</p>
+                    </div>
+                    <ul class="about-values" role="list">
+                        <li>
+                            <svg class="value-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+                            <div>
+                                <h4>Eccellenza clinica</h4>
+                                <p>Specialisti certificati e aggiornamento costante</p>
+                            </div>
+                        </li>
+                        <li>
+                            <svg class="value-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+                            <div>
+                                <h4>Cura personalizzata</h4>
+                                <p>Ogni paziente è unico, ogni soluzione su misura</p>
+                            </div>
+                        </li>
+                        <li>
+                            <svg class="value-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+                            <div>
+                                <h4>Tecnologia avanzata</h4>
+                                <p>Strumentazione all'avanguardia per diagnosi precise</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section class="team" id="team" aria-labelledby="team-title">
+            <div class="container">
+                <header class="section-header">
+                    <span class="section-tag">Il nostro team</span>
+                    <h2 id="team-title" class="section-title">Specialisti al tuo <span class="text-accent">servizio</span></h2>
+                    <p class="section-description">Un team multidisciplinare di oculisti, optometristi e ottici per una cura completa</p>
+                </header>
+                
+                <div class="team-grid" id="teamGrid" role="list">
+                </div>
+            </div>
+        </section>
+
+        <section class="tech" aria-labelledby="tech-title">
+            <div class="container">
+                <header class="section-header">
+                    <span class="section-tag">Tecnologia</span>
+                    <h2 id="tech-title" class="section-title">Strumentazione <span class="text-accent">all'avanguardia</span></h2>
+                </header>
+                
+                <div class="tech-grid">
+                    <article class="tech-card">
+                        <div class="tech-icon">🔬</div>
+                        <h3>OCT Spectralis</h3>
+                        <p>Tomografia a coerenza ottica per retina e nervo ottico</p>
+                    </article>
+                    <article class="tech-card">
+                        <div class="tech-icon">🗺️</div>
+                        <h3>Topografo Sirius</h3>
+                        <p>Analisi corneale completa per cheratocono e chirurgia</p>
+                    </article>
+                    <article class="tech-card">
+                        <div class="tech-icon">📊</div>
+                        <h3>Campo Visivo Humphrey</h3>
+                        <p>Diagnosi e monitoraggio glaucoma e patologie neurologiche</p>
+                    </article>
+                    <article class="tech-card">
+                        <div class="tech-icon">⚡</div>
+                        <h3>Laser Excimer</h3>
+                        <p>Chirurgia refrattiva personalizzata (LASIK, PRK, SMILE)</p>
+                    </article>
+                    <article class="tech-card">
+                        <div class="tech-icon">📸</div>
+                        <h3>Retinografo Widefield</h3>
+                        <p>Imaging retinico ultra-widefield senza midriasi</p>
+                    </article>
+                    <article class="tech-card">
+                        <div class="tech-icon">💧</div>
+                        <h3>Analisi Lacrimale</h3>
+                        <p>Diagnosi secchezza oculare e malattia dell'occhio secco</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="cta" aria-labelledby="cta-title">
+            <div class="container">
+                <div class="cta-content">
+                    <h2 id="cta-title">Pronto a vedere meglio?</h2>
+                    <p>Prenota la tua visita oculistica completa. Il nostro team ti guiderà nella scelta della soluzione migliore per i tuoi occhi.</p>
+                    <a href="#prenotazione" class="btn btn-primary btn-large">Prenota ora</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="contact" id="contatti" aria-labelledby="contact-title">
+            <div class="container contact-grid">
+                <div class="contact-info">
+                    <span class="section-tag">Contatti</span>
+                    <h2 id="contact-title" class="section-title">Vieni a <span class="text-accent">trovarci</span></h2>
+                    <p class="contact-description">Siamo nel cuore della città, facilmente raggiungibili con mezzi pubblici e parcheggio convenzionato.</p>
+                    
+                    <ul class="contact-details" role="list">
+                        <li>
+                            <div class="contact-icon">📍</div>
+                            <div>
+                                <h4>Indirizzo</h4>
+                                <p>Via Roma 123, 00100 Roma (RM)</p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="contact-icon">📞</div>
+                            <div>
+                                <h4>Telefono</h4>
+                                <p><a href="tel:+39061234567">+39 06 1234 567</a><br><a href="tel:+393201234567">+39 320 123 4567</a> (WhatsApp)</p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="contact-icon">✉️</div>
+                            <div>
+                                <h4>Email</h4>
+                                <p><a href="mailto:info@visionechiara.it">info@visionechiara.it</a><br><a href="mailto:prenotazioni@visionechiara.it">prenotazioni@visionechiara.it</a></p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                
+                <div class="contact-form-wrapper">
+                    <h3 class="form-title">Orari di apertura</h3>
+                    <div class="hours-list" id="hoursList" role="list">
+                    </div>
+                    
+                    <div class="map-placeholder" aria-label="Mappa della sede">
+                        <iframe 
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3024.123456789!2d12.4924!3d41.8902!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x132f5e1234567890%3A0x1234567890abcdef!2sVia%20Roma%20123%2C%2000100%20Roma!5e0!3m2!1sit!2sit!4v1234567890"
+                            width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+                            title="Posizione Ottica Visione Chiara">
+                        </iframe>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="booking" id="prenotazione" aria-labelledby="booking-title">
+            <div class="container">
+                <header class="section-header" style="max-width: 600px; margin: 0 auto 3rem;">
+                    <span class="section-tag">Prenotazione</span>
+                    <h2 id="booking-title" class="section-title">Prenota la tua <span class="text-accent">visita</span></h2>
+                    <p class="section-description">Compila il modulo, ti ricontatteremo entro 24h per confermare data e ora</p>
+                </header>
+                
+                <form class="booking-form" id="bookingForm" novalidate>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="nome">Nome e Cognome *</label>
+                            <input type="text" id="nome" name="nome" required autocomplete="name" placeholder="Mario Rossi">
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email *</label>
+                            <input type="email" id="email" name="email" required autocomplete="email" placeholder="mario.rossi@email.com">
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="telefono">Telefono *</label>
+                            <input type="tel" id="telefono" name="telefono" required autocomplete="tel" placeholder="+39 3XX XXXXXXX">
+                        </div>
+                        <div class="form-group">
+                            <label for="servizio">Servizio *</label>
+                            <select id="servizio" name="servizio" required>
+                                <option value="">Seleziona un servizio</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="data">Data preferita *</label>
+                            <input type="date" id="data" name="data" required min="">
+                        </div>
+                        <div class="form-group">
+                            <label for="ora">Ora preferita *</label>
+                            <select id="ora" name="ora" required>
+                                <option value="">Seleziona prima la data</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="note">Note aggiuntive</label>
+                        <textarea id="note" name="note" rows="4" placeholder="Es. Prima visita, rinnovo patente, fastidio occhi secchi, ecc."></textarea>
+                    </div>
+                    <div class="form-consent">
+                        <label class="checkbox-wrapper">
+                            <input type="checkbox" name="privacy" required>
+                            <span class="checkmark"></span>
+                            Accetto l'<a href="#privacy">informativa privacy</a> e acconsento al trattamento dei dati per la prenotazione *
+                        </label>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-full">Invia prenotazione</button>
+                    <p class="form-note">* Campi obbligatori. Non è una prenotazione confermata, verrete ricontattati.</p>
+                </form>
+                
+                <div class="toast" id="toast" role="alert" aria-live="polite" hidden>
+                    <div class="toast-content">
+                        <svg class="toast-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                        <span class="toast-message"></span>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer" id="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="#" class="logo" aria-label="Ottica Visione Chiara - Home">
+                        <svg class="logo-icon" viewBox="0 0 48 48" fill="none" aria-hidden="true">
+                            <ellipse cx="24" cy="24" rx="20" ry="12" stroke="currentColor" stroke-width="2"/>
+                            <circle cx="24" cy="24" r="6" fill="currentColor"/>
+                            <path d="M12 24c0-6.6 5.4-12 12-12s12 5.4 12 12" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                        </svg>
+                        <span class="logo-text">Visione<span class="logo-accent">Chiara</span></span>
+                    </a>
+                    <p>Dal 1995, la tua vista è la nostra missione. Eccellenza clinica, tecnologia avanzata e cura personalizzata.</p>
+                    <div class="social-links">
+                        <a href="#" class="social-link" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>
+                        <a href="#" class="social-link" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></a>
+                        <a href="#" class="social-link" aria-label="Google Maps"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></a>
+                    </div>
+                </div>
+                
+                <nav class="footer-nav" aria-label="Navigazione principale">
+                    <h4>Servizi</h4>
+                    <ul>
+                        <li><a href="#servizi">Visita oculistica</a></li>
+                        <li><a href="#servizi">Lenti a contatto</a></li>
+                        <li><a href="#servizi">Occhiali su misura</a></li>
+                        <li><a href="#servizi">Chirurgia refrattiva</a></li>
+                        <li><a href="#servizi">Diagnostica avanzata</a></li>
+                    </ul>
+                </nav>
+                
+                <nav class="footer-nav" aria-label="Informazioni">
+                    <h4>Informazioni</h4>
+                    <ul>
+                        <li><a href="#chi-siamo">Chi siamo</a></li>
+                        <li><a href="#team">Il nostro team</a></li>
+                        <li><a href="#contatti">Contatti e orari</a></li>
+                        <li><a href="#privacy">Privacy Policy</a></li>
+                        <li><a href="#cookie">Cookie Policy</a></li>
+                    </ul>
+                </nav>
+                
+                <div class="footer-contact">
+                    <h4>Contatti</h4>
+                    <address>
+                        <p>📍 Via Roma 123, 00100 Roma</p>
+                        <p>📞 <a href="tel:+39061234567">06 1234 567</a></p>
+                        <p>✉️ <a href="mailto:info@visionechiara.it">info@visionechiara.it</a></p>
+                        <p>🕐 Lun-Ven 9-13 / 15-19, Sab 9-13</p>
+                    </address>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 Ottica Visione Chiara. Tutti i diritti riservati. P.IVA 12345678901</p>
+                <p class="footer-credits">Realizzato con <span class="heart">❤️</span> per la salute dei tuoi occhi</p>
+            </div>
+        </div>
+    </footer>
+
+    <div class="scroll-top" id="scrollTop" aria-label="Torna su" hidden>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="18 15 12 9 6 15"/></svg>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
