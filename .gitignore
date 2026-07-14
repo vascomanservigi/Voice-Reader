@@ -5,3 +5,11 @@ node_modules/
 *.local
 dist/
 build/
+coverage/
+*.tgz
+npm-debug.log*
+.yarn-integrity
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
